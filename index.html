@@ -1,25 +1,155 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Find jobs and connect with employers across Ghana.">
-<title>JobLink Ghana | Find Your Next Opportunity</title>
-<link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find jobs and connect with employers across Ghana.">
+  <title>JobLink Ghana | Find Your Next Opportunity</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-<header class="header"><a class="brand" href="#"><span class="mark">JL</span> JobLink <b>Ghana</b></a>
-<button id="menuToggle" class="menu-toggle" aria-expanded="false">Menu</button>
-<nav id="mainNav"><a href="#jobs">Find jobs</a><a href="#employers">For employers</a><a href="#how">How it works</a><a href="#account">Sign in</a></nav></header>
+<header class="header">
+  <a class="brand" href="#"><span class="mark">JL</span> JobLink <b>Ghana</b></a>
+  <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav" type="button">Menu</button>
+  <nav id="mainNav">
+    <a href="#jobs">Find jobs</a>
+    <a href="#employers">For employers</a>
+    <a href="#how">How it works</a>
+    <a href="#account">Register organisation</a>
+  </nav>
+</header>
+
 <main>
-<section class="hero"><div><p class="eyebrow">YOUR NEXT OPPORTUNITY STARTS HERE</p><h1>Find work.<br>Build your future.</h1>
-<p class="intro">Discover opportunities across Ghana and connect with organisations looking for people like you.</p>
-<form id="jobSearchForm" class="search"><label class="sr-only" for="jobSearch">Job title or keyword</label><input id="jobSearch" type="search" placeholder="Job title or keyword"><button>Search jobs</button></form>
-<p class="hint">Explore opportunities in Accra, Kumasi, Takoradi and beyond.</p></div>
-<div class="feature-card"><div class="art"><span class="sun"></span><span class="hill"></span><span class="person"></span><span class="check">✓</span></div><h3>Make your next move</h3><p>Find opportunities and take the next step with confidence.</p></div></section>
-<section class="benefits"><div><b>Discover</b><span>Find relevant opportunities</span></div><div><b>Connect</b><span>Reach employers</span></div><div><b>Grow</b><span>Move your career forward</span></div></section>
-<section id="jobs" class="section"><p class="eyebrow">START EXPLORING</p><h2>Find the right opportunity</h2><p id="searchStatus" class="muted">Your job search starts here.</p><div class="empty" id="jobsState"><div class="search-icon">⌕</div><h3>Job listings will appear here</h3><p>This starter website is ready to connect to your JobLink Ghana database.</p><button id="clearSearch" class="secondary" type="button">Clear search</button></div></section>
-<section id="employers" class="employers"><div><p class="eyebrow light">FOR ORGANISATIONS</p><h2>Find people who can help your organisation grow.</h2><p>Organisation registration and job publishing will be connected after the website is publishing correctly.</p></div><a class="light-button" href="#account">Get started →</a></section>
-<section id="how" class="section how"><p class="eyebrow">SIMPLE BY DESIGN</p><h2>How JobLink Ghana works</h2><div class="steps"><article><span>01</span><h3>Explore</h3><p>Search for roles that match your skills.</p></article><article><span>02</span><h3>Prepare</h3><p>Get your profile and application documents ready.</p></article><article><span>03</span><h3>Apply</h3><p>Connect with employers when applications are enabled.</p></article></div></section>
-<section id="account" class="account"><div><p class="eyebrow">COMING NEXT</p><h2>Accounts and applications</h2><p>We will connect sign-in, organisation verification, subscriptions and job applications after the starter site is working.</p></div><span class="pill">● Setup in progress</span></section>
-</main><footer><a class="brand" href="#"><span class="mark">JL</span> JobLink <b>Ghana</b></a><p>Connecting talent with opportunity across Ghana.</p><small>© <span id="year"></span> JobLink Ghana. All rights reserved.</small></footer>
-</body></html>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">YOUR NEXT OPPORTUNITY STARTS HERE</p>
+      <h1>Find work.<br>Build your future.</h1>
+      <p class="intro">Discover opportunities across Ghana and connect with organisations looking for people like you.</p>
+
+      <form id="jobSearchForm" class="search">
+        <label class="sr-only" for="jobSearch">Job title or keyword</label>
+        <input id="jobSearch" type="search" placeholder="Job title or keyword">
+        <button type="submit">Search jobs</button>
+      </form>
+
+      <p class="hint">Explore opportunities in Accra, Kumasi, Takoradi and beyond.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="art">
+        <span class="sun"></span>
+        <span class="hill"></span>
+        <span class="person"></span>
+        <span class="check">✓</span>
+      </div>
+      <h3>Make your next move</h3>
+      <p>Find opportunities and take the next step with confidence.</p>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div><b>Discover</b><span>Find relevant opportunities</span></div>
+    <div><b>Connect</b><span>Reach employers</span></div>
+    <div><b>Grow</b><span>Move your career forward</span></div>
+  </section>
+
+  <section id="jobs" class="section">
+    <p class="eyebrow">START EXPLORING</p>
+    <h2>Find the right opportunity</h2>
+    <p id="searchStatus" class="muted">Your job search starts here.</p>
+
+    <div class="empty" id="jobsState">
+      <div class="search-icon">⌕</div>
+      <h3>Job listings will appear here</h3>
+      <p>Job listings will appear here once the live database connection is enabled.</p>
+      <button id="clearSearch" class="secondary" type="button">Clear search</button>
+    </div>
+  </section>
+
+  <section id="employers" class="employers">
+    <div>
+      <p class="eyebrow light">FOR ORGANISATIONS</p>
+      <h2>Find people who can help your organisation grow.</h2>
+      <p>Create your organisation account and submit your details for approval before publishing jobs.</p>
+    </div>
+    <a class="light-button" href="#account">Register your organisation →</a>
+  </section>
+
+  <section id="how" class="section how">
+    <p class="eyebrow">SIMPLE BY DESIGN</p>
+    <h2>How JobLink Ghana works</h2>
+    <div class="steps">
+      <article><span>01</span><h3>Explore</h3><p>Search for roles that match your skills.</p></article>
+      <article><span>02</span><h3>Prepare</h3><p>Get your profile and application documents ready.</p></article>
+      <article><span>03</span><h3>Apply</h3><p>Connect with employers when applications are enabled.</p></article>
+    </div>
+  </section>
+
+  <section id="account" class="account">
+    <div>
+      <p class="eyebrow">EMPLOYER REGISTRATION</p>
+      <h2>Create your organisation account</h2>
+      <p>Register your organisation on JobLink Ghana. Your submission will remain pending until it completes the required approval process.</p>
+    </div>
+
+    <form id="organisationRegisterForm" class="organisation-form">
+      <label for="organisationName">Organisation name</label>
+      <input
+        id="organisationName"
+        name="organisationName"
+        type="text"
+        autocomplete="organization"
+        maxlength="150"
+        placeholder="Enter your organisation name"
+        required
+      >
+
+      <label for="organisationEmail">Contact email</label>
+      <input
+        id="organisationEmail"
+        name="organisationEmail"
+        type="email"
+        autocomplete="email"
+        placeholder="name@example.com"
+        required
+      >
+
+      <label for="organisationDescription">Organisation description (optional)</label>
+      <textarea
+        id="organisationDescription"
+        name="organisationDescription"
+        rows="4"
+        maxlength="2000"
+        placeholder="Tell us about your organisation"
+      ></textarea>
+
+      <label for="organisationPassword">Create a password</label>
+      <input
+        id="organisationPassword"
+        name="organisationPassword"
+        type="password"
+        autocomplete="new-password"
+        minlength="8"
+        placeholder="At least 8 characters"
+        required
+      >
+
+      <button type="submit">Create organisation account</button>
+
+      <p id="organisationRegisterStatus" role="status" aria-live="polite">
+        Complete the form to begin registration.
+      </p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="#"><span class="mark">JL</span> JobLink <b>Ghana</b></a>
+  <p>Connecting talent with opportunity across Ghana.</p>
+  <small>© <span id="year"></span> JobLink Ghana. All rights reserved.</small>
+</footer>
+</body>
+</html>
+```
